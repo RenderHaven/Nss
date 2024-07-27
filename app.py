@@ -453,6 +453,8 @@ def get_note(UserId):
 
     return jsonify(notes_data), 200
 
-
+@app.route('/hii')
+def hii():
+    return jsonify("hii")
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host='0.0.0.0', port=5000)
