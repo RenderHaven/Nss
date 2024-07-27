@@ -32,7 +32,7 @@ class User(db.Model):
     profile_image = db.Column(db.LargeBinary)
     isok=db.Column(Boolean,default=False)
     password=db.Column(db.String(100), nullable=False)
-    fcm_token = db.Column(db.String(256), nullable=True)
+    # fcm_token = db.Column(db.String(256), nullable=True)
     # Relationships
     my_note = relationship("Note", back_populates="user")
     my_evt = relationship("MyEvt", back_populates="user")
